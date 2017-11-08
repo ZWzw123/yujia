@@ -1,0 +1,648 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<!-- 设置文件 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Yogahub Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- 引入文件 -->
+<!-- js -->
+<script src="js/jquery-1.9.1.js"></script> 
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script src="js/modernizr.custom.js"></script>
+	<script src="js/index.js"></script>
+<!-- //js -->	
+<!-- 开始滚动事件的js-->
+
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>	
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+
+</script>
+<!--结束滚动事件-->
+</head>
+<style>
+	.top{
+		width: 100%;
+	}
+
+</style>
+<body>
+
+
+
+<div class="adcenter"><script src="js/f.js"></script></div>
+	<!-- topMessages -->
+	<div  class="cintainer">
+		<ul class="nav navbar-fixed-top">
+			<li class="l1"><a href="javascript:;">静兮瑜伽欢迎您的加入</a></li>
+			<li class="name "><a href="login.html">请登录</a></li>
+			<li id="tel" class="tel"><a href="regist.html">免费注册</a></li>
+			<li style="display: none"  class="zx"><a href="personal.html">个人中心</a></li>
+			<li style="display: none"  class="out "><a href="index.html">退出</a></li>
+		</ul>
+	</div>
+
+
+<script>
+if ( sessionStorage.name){
+	$(".name").html(sessionStorage.name)
+	$(".tel").html(sessionStorage.tel)
+	$(".name").css({"color":"white","margin-top":"10px"});
+	$(".tel").css({"color":"white","margin-top":"10px"})
+	$(".zx").css({"display":"block"})
+	$(".out").css({"display":"block",})
+	$(".tel").css({"display":"block",})
+
+}
+$(".out").click(function () {
+	sessionStorage.clear()
+})
+
+
+if(window.innerWidth=360){
+	$('.l1').css({"font-size":"1px","margin-left":"-10px"})
+	$('.tel').css({"margin-left":"0px"})
+	$('.name').css({"margin-left":"-10px"})
+	$('.zx').css({"margin-left":"-10px"})
+	$(".out").css({"margin-top":"0px","margin-left":"-10px"})
+
+}
+if(window.screen.width <=360){
+	$(".out").css({"margin-top":"-20px",})
+}
+
+
+
+</script>
+	<!--banner-->
+	<div class="banner">
+		<!--头部-->
+		<div class="headder">
+			<div class="container">				
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+					<!-- TAB 切换 分组 -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="index.html"> <img src="images/logo.png" alt="这里需要一个logo"/> </a>
+						</div>
+						<!-- 收集的导航链接，和其他形式的内容，锁定 -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="index.html" class="active">首页</a></li>
+								<li><a href="#about" class="scroll">关于我们</a></li>
+								<li><a href="#services" class="scroll">近期活动</a></li>
+								<li><a href="#testimonials" class="scroll">静兮教练</a></li>
+								<li><a href="#gallery" class="scroll">教练风采</a></li>
+								<li><a href="#contact" class="scroll">联系我们</a></li>
+							</ul>	
+						</div>	
+						<div class="clearfix"> </div>
+					</div>	
+				</nav>				
+			</div>	
+		</div>	
+		<!--//header结束-->
+		<!-- banner-text Slider 从这里开始 -->
+		<script src="js/responsiveslides.min.js"></script>
+		<script>
+			// You can also use "$(window).load(function() {"
+				$(function () {
+				// Slideshow 3
+					$("#slider3").responsiveSlides({
+					auto: true,
+					pager:true,
+					nav:false,
+					speed: 500,
+					namespace: "callbacks",
+					before: function () {
+					$('.events').append("<li>before event fired.</li>");
+					},
+					after: function () {
+						$('.events').append("<li>after event fired.</li>");
+					}
+				});	
+			});
+		</script>
+		<!--//结束 slider-script -->
+		<div class="banner-title">
+				<div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider3">
+						<li>
+							<h3>抽出时间做瑜伽</h3>
+							<p>"瑜伽是一场自我的旅途"</p>
+						</li>
+						<li>
+							<h3>了解瑜伽与你的自我</h3>
+							<p>"瑜伽是一场自我的旅途"</p>
+						</li>
+						<li>
+							<h3>保持冷静做瑜伽</h3>
+							<p>"瑜伽是一场自我的旅途"</p>
+						</li>
+					</ul>
+				</div>
+		</div>
+	</div>
+	<!--//banner-->
+	
+	<!-- ajax.js 轮播 -->
+	<script>
+		//  接口内容不一致  此接口对应轮播内容
+		$(function (){
+			
+//			var ajaxData = {
+//	          m : 'Api',
+//	          c : 'Index',
+//	          a : 'getMessages',
+//	          type : 2					
+//	        }
+//	        $.ajax({
+//	          type: 'GET',
+//	          url: "http://jingxiyujia.com/index.php",
+//	          data:ajaxData,
+//	          dataType: "jsonp",
+//	          jsonp: "callback",
+//	          jsonpCallback:"flightHandler",
+//	          success : function (resp){
+//		        console.log(resp);
+//		        for (var i = 0;i < resp.length;i ++) {
+//		        	str = '<li>';
+//		            str += '<h3>' + resp[i].title + '</h3>';
+//		            str += '<p data-toggle="modal" data-target=".bs-example-modal-lg">查看详情</p></li>';
+//		            
+//					strs = "<div style='width:90%;margin:0 auto;padding:10px 10%;'>";
+//		            strs += "<h3>" + resp[i].title + "</h3>";
+//		            strs += "<div>" + resp[i].content + "</div>";
+//		            strs += "</div>";
+//		            
+//		            $('#slider3').append(str);
+//		            $('div.modal-content').append(strs)
+//		        }
+//	          },
+//	          error : function (that){
+//	            console.log(that)
+//	          }
+//	        })
+		})
+	</script>
+	<script>
+//		$(function () {
+//			var ajaxData = {
+//			        m : 'Api',
+//					c : 'Index',
+//					a : 'getSorts'
+//				}
+//				$.ajax({
+//					type: 'get',
+//					url: "http://jingxiyujia.com/index.php",
+//					data:ajaxData,
+//					dataType: "jsonp",
+//					jsonp: "callback",
+//					jsonpCallback:"flightHandler",
+//					success : function (resp){
+////					alert(11);
+//						console.log(resp[0].name)
+//					},
+//					error : function (that){
+//						console.log(that)
+//					}
+//				})
+//		})
+	</script>
+	<div class="about" id="about">
+		<div class="container">
+			<div class="about-grids">
+				<div class="col-md-6 about-info">
+					<img src="images/11.jpg" alt=""/>
+				</div>
+				<div class="col-md-6 about-info">
+					<h3>关于我们</h3>
+					<p>瑜伽起源于印度，距今有五千多年的历史文化被人们称为“世界的瑰宝”。瑜伽发源印度北部的喜马拉雅山麓地带，古印度瑜伽修行者在大自然中修炼身心时，无意中发现各种动物与植物天生具有治疗、放松、睡眠、或保持清醒的方法，患病时能不经任何治疗而自然痊愈。</p>
+					<p>于是古印度瑜伽修行者根据动物的姿势观察、模仿并亲自体验，创立出一系列有益身心的锻炼系统，也就是体位法。这些姿势历经了五千多年的锤炼，瑜伽教给人们的治愈法，让世世代代的人从中获益。</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--services-->
+	<script>
+		$(function (){
+	        $.ajax({
+	          type: 'POST',
+			  url: "http://jingxiyujia.test/index.php?m=Api&c=Index&a=getMessages",
+			  data:{
+					type : 1
+					},
+		      dataType:"json",
+	          success : function (resp){
+
+//	            console.log(resp);
+	            for (var j = 0;j < resp.length;j ++) {
+	            	s = "<div class='col-md-4 services-grids-info' data-toggle='modal' data-target='.modal.fade." + resp[j].id + "'>";
+	            	s += "<img src='" + resp[j].image + "'/>";
+	            	s += "<h4>" + resp[j].title + "</h4></div>";
+
+	            	var str = [];
+
+	            	str += "<div class='modal fade " + resp[j].id + "' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel'>"
+	            	str += "<div class='modal-dialog modal-lg' role='document'>"
+	            	str += "<div class='modal-content'>"
+		            str += "<div style='width:80%;margin:0 auto;'>";
+		            str += "<h3>" + resp[j].title + "</h3>";
+		            str += "<div>" + resp[j].content + "</div>";
+		            str += "</div></div></div>";
+					str += "<style>img {width:100%;height:100%;}</style>"
+
+		            $('body').append(str);
+		            $('#services div.services-grids .services_container').append(s)
+	            }
+
+	          },
+
+	          error : function (that){
+	            console.log(that)
+	          }
+	        })
+
+
+	        //限制字数
+	         //使用id选择器;例如:tab对象->tr->td对象.
+
+	         //留待后用
+//	         function curstr(len){
+//	         	$(".col-md-4.services-grids-info h4").each(function(i){
+//		         if($(this).text().length>len){
+//		   			$(this).attr("title",$(this).text());
+//		    		var text=$(this).text().substring(0,len)+"...";
+//		            $(this).text(text);
+//		         }
+//		      });
+//	         }
+
+
+		})
+	</script>
+	<div class="services" id="services">
+		<div class="container">
+			<div class="services-grids">
+				<div class="col-md-3 services-grids-info">
+					<h3 class="jinqi">近期活动</h3>
+				</div>
+				<div id="dd4" class="col-md-4 services-grids-info">
+					<!--<img src="images/11.jpg" alt=""/>
+					<h4>阴瑜伽</h4>						-->
+				</div>
+				<div    class="col-md-4 services-grids-info">
+					<!--<img src="images/11.jpg" alt=""/>
+					<h4>双人瑜伽</h4>-->
+				</div>
+				<div class="services_container">
+
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+	if(screen.width>1000){
+		$(".jinqi").css({"position":"absolute","top":"-60px"})
+	}
+	if(window.innerWidth=375){
+$(".services_container").css({"margin-left":"-50px",})
+	}
+</script>
+
+<!--//services-->
+	<!--testimonials-->
+	<div class="testimonials" id="testimonials">
+		<div class="container">			
+			<!-- banner-text Slider starts Here -->
+				<script src="js/responsiveslides.min.js"></script>
+				 <!--<script>
+					// You can also use "$(window).load(function() {"
+						$(function () {
+						// Slideshow 4
+							$("#slider4").responsiveSlides({
+								auto: true,
+								pager:false,
+								nav:true,
+								speed: 500,
+								namespace: "callbacks",
+								before: function () {
+								$('.events').append("<li>before event fired.</li>");
+								},
+								after: function () {
+									$('.events').append("<li>after event fired.</li>");
+								}
+						    });	
+					});
+				</script>-->
+			<!--//End-slider-script -->	
+			<div class="col-md-4 testimonial-left">
+				<h3>教练</h3>
+			</div>
+			<div class="col-md-8 testimonial-right">
+				<div  id="top" class="callbacks_container">
+					
+				<!-- 讲师数据ajax -->
+				<script type="text/javascript">
+					$(function (){
+						$.ajax({
+							type: 'POST',
+							url: "http://jingxiyujia.test/index.php?m=Api&c=Index&a=getInstructors",
+							data:{
+								},
+		                    dataType:"json",
+		                    success : function (data){
+								console.log(data);
+								for (var k = 0;k < data.length;k ++) {
+									var tech = [];
+								
+									tech += "<li>"
+									tech += "<div class='testi-text'>"
+									tech += "<div class='testi-img'>"
+									tech += "<img style='margin-top: 50px' class='img' src='" + data[k].image + "' /></div>"
+									tech += "<h4  class='h4'>" + data[k].name + "</h4><p>" + data[k].introduction + "</p></div></li>"
+								
+									$("#slider4").append(tech);						
+								}
+								techBanner()
+							},
+							error : function (that){
+								console.log(that)
+							}
+						});
+
+						var techBanner = function (){
+							$("#slider4").responsiveSlides({
+								auto: true,
+								pager:false,
+								nav:true,
+								speed: 500,
+								namespace: "callbacks",
+								before: function () {
+								$('.events').append("<li>before event fired.</li>");
+								},
+								after: function () {
+									$('.events').append("<li>after event fired.</li>");
+								}
+						    });
+						}
+					})
+				</script>
+				
+					<ul class="rslides" id="slider4">
+						<!--<li>
+							<div class="testi-text">
+								<div class="testi-img">
+									<img src="images/img6.png" alt=""/>
+								</div>
+								<h4>李教练</h4>
+								<p>李教练介绍李教练介绍李教练介绍李教练介绍李教练介绍李教练介绍李教练介绍李教练介绍李教练介绍李教练介绍李教练介绍</p>
+							</div>
+						</li>
+						<li>
+							<div class="testi-text">
+								<div class="testi-img">
+									<img src="images/img6.png" alt=""/>
+								</div>
+								<h4>王教练</h4>
+								<p>王教练介绍王教练介绍王教练介绍王教练介绍王教练介绍王教练介绍王教练介绍王教练介绍王教练介绍王教练介绍王教练介绍王教练介绍</p>
+							</div>
+						</li>
+						<li>
+							<div class="testi-text">
+								<div class="testi-img">
+									<img src="images/img6.png" alt=""/>
+								</div>
+								<h4>孙教练</h4>
+								<p>孙教练介绍孙教练介绍孙教练介绍孙教练介绍孙教练介绍孙教练介绍孙教练介绍孙教练介绍孙教练介绍孙教练介绍孙教练介绍孙教练介绍孙教练介绍</p>
+							</div>
+						</li>
+						<li>
+							<div class="testi-text">
+								<div class="testi-img">
+									<img src="images/img6.png" alt=""/>
+								</div>
+								<h4>刘某</h4>
+								<p>刘某介绍刘某介绍刘某介绍刘某介绍刘某介绍刘某介绍刘某介绍</p>
+							</div>
+						</li>-->
+					</ul>
+				</div>
+			</div>				
+			<div class="clearfix"> </div>	
+		</div>
+	</div>
+	<!--gallery-->
+	<div class="gallery" id="gallery">
+		<div class="container">
+
+			<h3>教练风采</h3>
+
+			<script>
+				$.ajax({
+				    url:"http://jingxiyujia.test/index.php?m=Api&c=Index&a=getInstructors",
+					type:'post',
+					dataType:'json',
+					success:function (e) {
+				        for (var i in e){
+                            $(".swiper-wrapper").append("<div class='swiper-slide'  ><img class='img-responsive' style='width: 300px;height: 300px' src='"+e[i].image+"' alt='Responsive image'></div>")
+                        }
+
+						if (window.screen.width <=414) {
+
+							var swiper = new Swiper(".swiper-container", {
+
+								autoplay: 1000,
+								speed: 1000,
+								slidesPerView: 1,
+								loop: true,
+							})
+							$(".img-responsive").css({"margin":"0 auto"})
+						}else {
+							var swiper=new Swiper(".swiper-container",{
+								initialSlide:2,
+								autoplay:1000,
+								speed:1000,
+								slidesPerView:3,
+								loop:true,
+
+
+							})
+						}
+
+                    }
+				})
+			</script>
+
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<!--<div class="swiper-slide" style="text-align: center">1</div>
+					<div class="swiper-slide"  style="text-align: center">2</div>
+					<div class="swiper-slide"  style="text-align: center">3</div>
+					<div class="swiper-slide" style="text-align: center">4</div>
+					<div class="swiper-slide"  style="text-align: center">5</div>-->
+				</div>
+			</div>
+
+
+			<link rel="stylesheet" href="css/swiper.min.css">
+			<script src="js/swiper.min.js"></script>
+
+
+
+			<!--<div class="pic_list">
+				<ul>
+					&lt;!&ndash;<li class="li_st" data-img="images/banner.jpg" data-title="我很好" data-dis="阿斯顿阿斯蒂芬水电费"><img src="images/banner.jpg" alt=""></li>&ndash;&gt;
+				</ul>
+				<div class="show_box">
+					<div class="show_con">
+						<div class="s_left">
+							<img src="" alt="">
+						</div>
+						<div class="s_right">
+							<h3 class="s_title"></h3>
+							<p class="s_des"></p>
+						</div>
+						<div class="close_btn">X</div>
+					</div>
+				</div>
+			</div>-->
+			<!--<script src="js/grid.js"></script>
+				<script>
+					$(function() {
+						Grid.init();
+					});
+				</script>-->
+			<!--//end-gallery-->
+		</div>	
+	</div>
+	<!--gallery-->
+	<!--contact-->
+	<div class="contact" id="contact">
+		<div class="container">
+			<h3>怎么找到我们</h3>
+			<div class="contact-grids">
+				<div class="col-md-7 contact-left">				
+					<form>
+						<input class="in1" type="text" value="姓名" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '姓名';}" required="">
+						<input class="in2" type="email" value="邮箱" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '邮箱';}" required="">
+						<input class="in3" type="text" value="电话" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '电话';}" required="">
+						<textarea class="in4" type="text"  onfocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+						<input class="submit" value="提交" type="submit" >
+					</form>
+
+					<script type="text/javascript">
+						$(".submit").click(function () {
+							$.ajax({
+								url: "http://jingxiyujia.test/index.php?m=Api&c=Index&a=feedback",
+								type: "POST",
+								dataType:"json",
+								data: {
+									name:$(".in1").val(),
+									email: $(".in2").val(),
+									mobile: $(".in3").val(),
+									message: $(".in4").val(),
+								},
+
+								success: function(data) {
+					if(data.ret=="ok"){
+						alert("提交成功")
+					}else {
+						console.log(data.msg)
+					}
+
+
+
+
+
+
+
+
+								}
+							})
+						})
+					</script>
+
+
+
+
+
+
+				</div>
+				<div class="col-md-5 contact-right">
+					<p class="cnt-p">静兮瑜伽真诚欢迎您的到静兮瑜伽真诚欢迎您的到来静兮瑜伽真诚欢迎您的到来静兮瑜伽真诚欢迎您的到来</p>
+					<p>联系我们</p>
+					<p>地址 : 七一路与文化路交叉口双桥（桥南路东）南阳棋院二楼</p>
+					<p>电话 : +2 111 111 1111</p>
+					<p>传真 : +1 000 0000 0000</p>
+					<p>邮箱 : <a href="mailto:example@mail.com">mail@example.com</a></p>
+				</div>							
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<script>
+
+
+
+
+
+	if(screen.width=414){
+		$(".cnt-p").css({"width":"400px"})
+	}
+	if(screen.width=375){
+		$(".cnt-p").css({"width":"350px"})
+	}
+</script>
+	<!--contact-->
+	<div class="footer">
+		<div class="container">
+			<p>&copy; 2017年&nbsp;版权所有&nbsp;南阳静兮瑜伽健身有限公司</p>
+			<p>京ICP备16009343号</p>
+		</div>
+	</div>		
+	<!--//contact-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				/*
+				var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+				};
+				*/
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+	<!-- 引入核心JS文件 bootstrap
+          author ： MXL
+    ================================================== -->
+    <script src="js/bootstrap.js"> </script>
+</body>
+</html>
